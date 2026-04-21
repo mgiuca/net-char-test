@@ -9,7 +9,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-  print_message()
+  print_message.rpc()
 
 @rpc
 func print_message() -> void:
