@@ -65,7 +65,7 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 tooltip_text = "The server's IP address."
-text = "192.168."
+text = "192.168.86.40"
 
 [node name="BtnJoin" type="Button" parent="HBoxContainer/VbxJoin" unique_id=1386465923]
 layout_mode = 2
