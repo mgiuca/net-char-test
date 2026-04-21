@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b8njd3fymjhte"]
+
+[ext_resource type="PackedScene" uid="uid://broqv6bylus2n" path="res://player.tscn" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://de2qjfkxacpm4" path="res://level.gd" id="1_vonw3"]
+[ext_resource type="Texture2D" uid="uid://d1ba5povau27m" path="res://images/char-female.svg" id="3_0b4ue"]
+[ext_resource type="Texture2D" uid="uid://b656vwdg83xaj" path="res://images/char-male.svg" id="4_f2txt"]
+
+[node name="Level" type="Node2D" unique_id=931818659 node_paths=PackedStringArray("locally_controlled_player")]
+script = ExtResource("1_vonw3")
+locally_controlled_player = NodePath("Player1")
+
+[node name="Player1" parent="." unique_id=1320150124 instance=ExtResource("1_u52ul")]
+position = Vector2(264, 96)
+sprite_texture = ExtResource("3_0b4ue")
+
+[node name="Player2" parent="." unique_id=1812230683 instance=ExtResource("1_u52ul")]
+position = Vector2(760, 400)
+sprite_texture = ExtResource("4_f2txt")
+
+[node name="Box" type="StaticBody2D" parent="." unique_id=109418049]
+position = Vector2(840, 216)
+collision_mask = 2
+
+[node name="Visual" type="Polygon2D" parent="Box" unique_id=1262774490]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Collider" type="CollisionPolygon2D" parent="Box" unique_id=1015922655]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Box2" type="StaticBody2D" parent="." unique_id=444018082]
+position = Vector2(232, 352)
+collision_mask = 2
+
+[node name="Visual" type="Polygon2D" parent="Box2" unique_id=1611447824]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Collider" type="CollisionPolygon2D" parent="Box2" unique_id=2023510047]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Box3" type="StaticBody2D" parent="." unique_id=546584791]
+position = Vector2(856, 512)
+collision_mask = 2
+
+[node name="Visual" type="Polygon2D" parent="Box3" unique_id=1258184157]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Collider" type="CollisionPolygon2D" parent="Box3" unique_id=1398724875]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Box4" type="StaticBody2D" parent="." unique_id=1617807318]
+position = Vector2(512, 224)
+rotation = 1.5707964
+collision_mask = 2
+
+[node name="Visual" type="Polygon2D" parent="Box4" unique_id=300385412]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Collider" type="CollisionPolygon2D" parent="Box4" unique_id=1838453084]
+position = Vector2(-665.6, -92)
+polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
