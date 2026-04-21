@@ -15,6 +15,10 @@ run/main_scene="uid://cr3mk2m285c0w"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+NetManager="*uid://cq8ljgedhj5db"
+
 [debug]
 
 gdscript/warnings/incompatible_ternary=2
