@@ -65,3 +65,10 @@ polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
 [node name="Collider" type="CollisionPolygon2D" parent="Box4" unique_id=1838453084]
 position = Vector2(-665.6, -92)
 polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="Button" type="Button" parent="." unique_id=1894249060]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Print message"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
