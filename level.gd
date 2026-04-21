@@ -34,7 +34,6 @@ func _on_peer_connected(id: int) -> void:
 @rpc('authority', 'call_local')
 func hand_authority_to(node_path: NodePath, peer: int) -> void:
   var node := get_tree().root.get_node(node_path)
-  print('%s.set_multiplayer_authority(%d)' % [node.get_path(), peer])
   node.set_multiplayer_authority(peer)
 
   # If this is being transferred to me, set this as the locally controlled player.
