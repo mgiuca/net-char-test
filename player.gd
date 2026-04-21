@@ -19,3 +19,10 @@ func move(direction: Vector2) -> void:
   velocity = direction * MAX_SPEED
 
   move_and_slide()
+
+  sync_position.rpc(position, velocity)
+
+@rpc('authority', 'unreliable')
+func sync_position(new_pos: Vector2, new_vel: Vector2) -> void:
+  position = new_pos
+  velocity = new_vel
