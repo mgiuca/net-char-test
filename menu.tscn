@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cr3mk2m285c0w"]
+
+[ext_resource type="Script" uid="uid://bukhjk527mtx0" path="res://menu.gd" id="1_lti8b"]
+
+[node name="Menu" type="Control" unique_id=629896396]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=934228178]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="VbxHost" type="VBoxContainer" parent="HBoxContainer" unique_id=216553687]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="HBoxContainer/VbxHost" unique_id=1814854114]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Host"
+
+[node name="LblMyIP" type="Label" parent="HBoxContainer/VbxHost" unique_id=1414675233]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="BtnHost" type="Button" parent="HBoxContainer/VbxHost" unique_id=1469863777]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Start hosting a game."
+text = "Start game"
+
+[node name="VbxJoin" type="VBoxContainer" parent="HBoxContainer" unique_id=1853247993]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="HBoxContainer/VbxJoin" unique_id=847384464]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Join"
+
+[node name="TxtJoinIP" type="LineEdit" parent="HBoxContainer/VbxJoin" unique_id=776439297]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "The server's IP address."
+text = "192.168."
+
+[node name="BtnJoin" type="Button" parent="HBoxContainer/VbxJoin" unique_id=1386465923]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Join a game at the above IP address."
+text = "Connect"
+
+[connection signal="pressed" from="HBoxContainer/VbxHost/BtnHost" to="." method="_on_btn_host_pressed"]
+[connection signal="pressed" from="HBoxContainer/VbxJoin/BtnJoin" to="." method="_on_btn_join_pressed"]
