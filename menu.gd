@@ -7,8 +7,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-  # TODO: Get my IP address in lbl_my_ip.
-  pass
+  lbl_my_ip.text = Globals.get_my_ip()
 
 func _on_btn_host_pressed() -> void:
   print('Hosting game')

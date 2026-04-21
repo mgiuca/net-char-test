@@ -40,6 +40,9 @@ text = "Host"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
+tooltip_text = "This device's IP address on the local network
+(for other players to connect to)"
+mouse_filter = 1
 
 [node name="BtnHost" type="Button" parent="HBoxContainer/VbxHost" unique_id=1469863777]
 layout_mode = 2
