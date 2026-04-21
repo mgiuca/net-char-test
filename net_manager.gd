@@ -61,6 +61,7 @@ func _on_peer_disconnected(id: int) -> void:
 
 func _on_connected_to_server() -> void:
   print('Connected to server')
+  print('My ID: %d' % multiplayer.get_unique_id())
 
 func _on_connection_failed() -> void:
   print('Connection failed')
