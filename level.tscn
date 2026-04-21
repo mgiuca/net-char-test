@@ -5,9 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d1ba5povau27m" path="res://images/char-female.svg" id="3_0b4ue"]
 [ext_resource type="Texture2D" uid="uid://b656vwdg83xaj" path="res://images/char-male.svg" id="4_f2txt"]
 
-[node name="Level" type="Node2D" unique_id=931818659 node_paths=PackedStringArray("locally_controlled_player")]
+[node name="Level" type="Node2D" unique_id=931818659]
 script = ExtResource("1_vonw3")
-locally_controlled_player = NodePath("Player1")
 
 [node name="Player1" parent="." unique_id=1320150124 instance=ExtResource("1_u52ul")]
 position = Vector2(264, 96)
@@ -65,3 +64,18 @@ polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
 [node name="Collider" type="CollisionPolygon2D" parent="Box4" unique_id=1838453084]
 position = Vector2(-665.6, -92)
 polygon = PackedVector2Array(528, 72, 816, 72, 816, 112, 528, 112)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1729639494]
+
+[node name="WaitScrim" type="PanelContainer" parent="UI" unique_id=1969194622]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/WaitScrim" unique_id=1634612967]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Waiting for connection..."
+horizontal_alignment = 1
