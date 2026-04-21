@@ -26,6 +26,9 @@ func _on_btn_join_pressed() -> void:
 
   get_tree().change_scene_to_file('res://level.tscn')
 
+func _on_txt_join_ip_text_submitted(_new_text: String) -> void:
+  _on_btn_join_pressed()
+
 func show_dialog(title: String, message: String) -> void:
   accept_dialog.title = title
   accept_dialog.dialog_text = message

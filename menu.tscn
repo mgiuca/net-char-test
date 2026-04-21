@@ -78,4 +78,5 @@ title = ""
 initial_position = 2
 
 [connection signal="pressed" from="HBoxContainer/VbxHost/BtnHost" to="." method="_on_btn_host_pressed"]
+[connection signal="text_submitted" from="HBoxContainer/VbxJoin/TxtJoinIP" to="." method="_on_txt_join_ip_text_submitted"]
 [connection signal="pressed" from="HBoxContainer/VbxJoin/BtnJoin" to="." method="_on_btn_join_pressed"]
