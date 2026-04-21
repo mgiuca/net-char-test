@@ -25,8 +25,10 @@ func hide_wait_scrim() -> void:
   wait_scrim.hide()
 
 func _on_peer_connected(id: int) -> void:
-  # Give control of Player 2 to the connecting player.
-  hand_authority_to.rpc(player_2.get_path(), id)
+  if multiplayer.is_server():
+    # Give control of Player 2 to the connecting player.
+    print('Giving control of player 2 to %d' % id)
+    hand_authority_to.rpc(player_2.get_path(), id)
 
 ## Transfers multiplayer authority of a node to a given peer.
 @rpc
