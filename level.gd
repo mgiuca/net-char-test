@@ -31,7 +31,7 @@ func _on_peer_connected(id: int) -> void:
     hand_authority_to.rpc(player_2.get_path(), id)
 
 ## Transfers multiplayer authority of a node to a given peer.
-@rpc
+@rpc('authority', 'call_local')
 func hand_authority_to(node_path: NodePath, peer: int) -> void:
   var node := get_tree().root.get_node(node_path)
   print('%s.set_multiplayer_authority(%d)' % [node.get_path(), peer])
