@@ -7,10 +7,3 @@ func _physics_process(_delta: float) -> void:
   if locally_controlled_player:
     locally_controlled_player.move(direction)
 
-
-func _on_button_pressed() -> void:
-  print_message.rpc()
-
-@rpc
-func print_message() -> void:
-  print('Hello this is a message')
