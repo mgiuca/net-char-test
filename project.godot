@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Network Character Test"
 run/main_scene="uid://cr3mk2m285c0w"
-config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="uid://cvydvugg1u7kq"
 
 [autoload]
 

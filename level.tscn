@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://broqv6bylus2n" path="res://player.tscn" id="1_u52ul"]
 [ext_resource type="Script" uid="uid://de2qjfkxacpm4" path="res://level.gd" id="1_vonw3"]
-[ext_resource type="Texture2D" uid="uid://d1ba5povau27m" path="res://images/char-female.svg" id="3_0b4ue"]
-[ext_resource type="Texture2D" uid="uid://b656vwdg83xaj" path="res://images/char-male.svg" id="4_f2txt"]
+[ext_resource type="Texture2D" uid="uid://doo44ftfdfasp" path="res://images/char-female.png" id="3_0b4ue"]
+[ext_resource type="Texture2D" uid="uid://dy7ddxn6ioge" path="res://images/char-male.png" id="4_f2txt"]
 
 [node name="Level" type="Node2D" unique_id=931818659]
 script = ExtResource("1_vonw3")
