@@ -32,6 +32,7 @@ func start_join_game(ip: String) -> Error:
   return Error.OK
 
 func get_my_ip() -> String:
+  # TODO: On Linux, need to filter out the 'virbr' interface (see old version).
   var addresses := IP.get_local_addresses()
 
   for ip in addresses:
